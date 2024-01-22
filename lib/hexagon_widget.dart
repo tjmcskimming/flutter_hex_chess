@@ -7,7 +7,7 @@ class HexagonWidget extends StatelessWidget {
   final PaintingStyle paintingStyle;
   final String text; // New field for text
 
-  HexagonWidget({
+  const HexagonWidget({
     Key? key,
     required this.height,
     required this.color,
@@ -17,7 +17,7 @@ class HexagonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: hexagonWidthToHeightRatio * height, // Assuming a fixed width-to-height ratio
       height: height,
       child: Stack(

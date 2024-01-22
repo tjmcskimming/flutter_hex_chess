@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hex_chess/constants.dart';
+import 'constants.dart';
 import 'hexagon_widget.dart';
 import 'hexagon.dart';
 import 'board.dart';

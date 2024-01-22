@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'hexagon.dart';
+
 class Board {
 
   late List<Hexagon> hexagons;
@@ -10,6 +11,8 @@ class Board {
 
   // This defines the shape of the board
   // each _HexGroup is a single column with one or more hexes
+  // this method can define hexagonal grids of arbitrary shape,
+  // with gaps etc. 
   final List<_HexGroup> _columns = [
     _HexGroup(-5, 0, 6),
     _HexGroup(-4, -1, 7),
@@ -40,11 +43,11 @@ class Board {
     int colorIndex = ((hexGroup.q0 + j) % 3 - (hexGroup.r % 3)) % 3;
     switch (colorIndex) {
       case 0:
-        return Color.fromARGB(255, 45, 155, 45);
+        return const Color.fromARGB(255, 45, 155, 45);
       case 1:
-        return Color.fromARGB(255, 30, 30, 155);
+        return const Color.fromARGB(255, 30, 30, 155);
       case 2:
-        return Color.fromARGB(255, 83, 33, 10); // Third color
+        return const Color.fromARGB(255, 83, 33, 10);
       default:
         return Colors.grey; // Fallback color
     }
